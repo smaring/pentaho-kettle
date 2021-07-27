@@ -17,7 +17,7 @@
   </parent>
 
   <properties>
-    <reactive-streams.version>1.0.0</reactive-streams.version>
+    <reactive-streams.version>1.0.3</reactive-streams.version>
     <pdi-version>$(project.version}</pdi-version>
   </properties>
 
