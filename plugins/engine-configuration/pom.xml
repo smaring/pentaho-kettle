@@ -17,6 +17,7 @@
 
   <properties>
     <pdi.version>9.1.0.8-629</pdi.version>
+    <pentaho-osgi-bundles.version>9.1.0.8-629</pentaho-osgi-bundles.version>
   </properties>
 
   <modules>
