@@ -28,6 +28,7 @@
     <pentaho-registry.version>9.1.0.8-629</pentaho-registry.version>
     <pentaho-connections.version>9.1.0.8-629</pentaho-connections.version>
     <mondrian.version>9.1.0.8-629</mondrian.version>
+    <platform.version>9.1.0.8-629</platform.version>
 
     <!-- Third-party dependencies -->
     <antlr-complete.version>3.5.2</antlr-complete.version>
@@ -138,7 +139,7 @@
     <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-platform-api</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
 
     <!-- Reporting dependencies -->
