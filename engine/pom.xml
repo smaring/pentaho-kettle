@@ -74,9 +74,9 @@
     <wsdl4j-qname.version>1.6.1</wsdl4j-qname.version>
     <ehcache-core.version>2.5.1</ehcache-core.version>
     <hibernate-core.version>3.6.9.Final</hibernate-core.version>
-    <hibernate-c3p0.version>3.6.9.Final</hibernate-c3p0.version>
+    <hibernate-c3p0.version>5.4.24.Final</hibernate-c3p0.version>
     <hibernate-commons-annotations.version>3.2.0.Final</hibernate-commons-annotations.version>
-    <hibernate-ehcache.version>3.6.9.Final</hibernate-ehcache.version>
+    <hibernate-ehcache.version>5.4.24.Final</hibernate-ehcache.version>
     <cglib-nodep.version>2.2</cglib-nodep.version>
     <nekohtml.version>1.9.15</nekohtml.version>
     <js.version>1.7R3</js.version>
