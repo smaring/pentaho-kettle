@@ -32,7 +32,7 @@
     <enunciate-core-annotations.version>1.28</enunciate-core-annotations.version>
     <wadl-core.version>1.1.6</wadl-core.version>
     <wadl-ant.version>1.1.6</wadl-ant.version>
-    <snakeyaml.version>1.7</snakeyaml.version>
+    <snakeyaml.version>2.0</snakeyaml.version>
 
     <!-- Test dependencies -->
     <se-jcr.version>0.9</se-jcr.version>
@@ -400,34 +400,21 @@
                 <echo message="Compiling the Wadl description..."/>
                 <taskdef name="wjc" classname="org.jvnet.ws.wadl2java.WJCTask" classpathref="maven.plugin.classpath"/>
 
-                <wjc description="wadl2java/wadl-resource/application.wadl.xml"
-                     package="com.pentaho.di.services"
-                     autoSchemaPackage="false"
-                     target="src/main/java">
+                <wjc description="wadl2java/wadl-resource/application.wadl.xml" package="com.pentaho.di.services" autoSchemaPackage="false" target="src/main/java">
 
                   <produces dir="src/main/java" includes="**/*.java"/>
-                  <customClassName uri="http://localhost:9080/pentaho-di/plugin/"
-                                   classname="PurRepositoryPluginServices"/>
+                  <customClassName uri="http://localhost:9080/pentaho-di/plugin/" classname="PurRepositoryPluginServices"/>
                 </wjc>
 
                 <!-- Modify the resulting class adding our tagging interface -->
-                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java"
-                               match="package com.pentaho.di.services;${line.separator}"
-                               replace="package com.pentaho.di.services;${line.separator}${line.separator}import org.pentaho.di.repository.IRepositoryService;"/>
+                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java" match="package com.pentaho.di.services;${line.separator}" replace="package com.pentaho.di.services;${line.separator}${line.separator}import org.pentaho.di.repository.IRepositoryService;"/>
 
-                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java"
-                               match="public static class (.*) \{"
-                               replace="public static class \1 implements IRepositoryService {"
-                               byline="true"/>
+                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java" match="public static class (.*) \{" replace="public static class \1 implements IRepositoryService {" byline="true"/>
 
-                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java"
-                               match="${wadl2java.generated-class-name}"
-                               replace="${wadl2java.desired-class-name}"
-                               byline="true"/>
+                <replaceregexp file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java" match="${wadl2java.generated-class-name}" replace="${wadl2java.desired-class-name}" byline="true"/>
 
                 <!-- Finally rename the file and overwrite the original -->
-                <move file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java"
-                      tofile="${wadl2java.codedir}/${wadl2java.desired-class-name}.java"/>
+                <move file="${wadl2java.codedir}/${wadl2java.generated-class-name}.java" tofile="${wadl2java.codedir}/${wadl2java.desired-class-name}.java"/>
               </target>
             </configuration>
           </execution>
