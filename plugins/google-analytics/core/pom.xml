@@ -90,27 +90,27 @@
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-analytics</artifactId>
-      <version>v3-rev116-1.20.0</version>
+      <version>v3-rev20190807-1.32.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.20.0</version>
+      <version>1.32.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.oauth-client</groupId>
       <artifactId>google-oauth-client</artifactId>
-      <version>1.20.0</version>
+      <version>1.32.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client-jackson2</artifactId>
-      <version>1.20.0</version>
+      <version>1.40.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client</artifactId>
-      <version>1.20.0</version>
+      <version>1.40.0</version>
       <exclusions>
         <!-- Vulnerable component - need more recent version [PPP-3571] -->
         <exclusion>
